@@ -1,0 +1,28 @@
+#服务器配置
+server:
+  servlet:
+    context-path: /boy
+  port: 8081
+#数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test01?useUnicode=true&characterEnocoding=utf-8
+    username: root
+    password: root
+  #热部署生效
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+#mybatis配置
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  type-aliases-package: com.example.wenyb.domain
+
+
+
+
+
+
